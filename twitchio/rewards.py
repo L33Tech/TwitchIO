@@ -2,19 +2,15 @@
 
 """
 The MIT License (MIT)
-
 Copyright (c) 2017-2021 TwitchIO
-
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
 to deal in the Software without restriction, including without limitation
 the rights to use, copy, modify, merge, publish, distribute, sublicense,
 and/or sell copies of the Software, and to permit persons to whom the
 Software is furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -141,7 +137,6 @@ class CustomReward:
     ):
         """
         Edits the reward. Note that apps can only modify rewards they have made.
-
         Parameters
         -----------
         token: the bearer token for the channel of the reward
@@ -159,7 +154,6 @@ class CustomReward:
         global_cooldown: how many seconds the global cooldown should be
         paused: whether redemptions on this reward should be paused or not
         redemptions_skip_queue: whether redemptions skip the request queue or not
-
         Returns
         --------
         :class:`CustomReward` itself.
@@ -208,12 +202,10 @@ class CustomReward:
     async def delete(self, token: str):
         """
         Deletes the custom reward
-
         Parameters
         ----------
         token:
             :class:`str` the oauth token of the target channel
-
         Returns
         --------
         None
@@ -236,7 +228,6 @@ class CustomReward:
     async def get_redemptions(self, token: str, status: str, sort: str = None):
         """
         Gets redemptions for this reward
-
         Parameters
         -----------
         token:
@@ -284,12 +275,10 @@ class CustomRewardRedemption:
     async def fulfill(self, token: str):
         """
         marks the redemption as fulfilled
-
         Parameters
         ----------
         token:
             :class:`str` the token of the target channel
-
         Returns
         --------
         itself.
@@ -318,12 +307,10 @@ class CustomRewardRedemption:
     async def refund(self, token: str):
         """
         marks the redemption as cancelled
-
         Parameters
         ----------
         token:
             :class:`str` the token of the target channel
-
         Returns
         --------
         itself.
